@@ -6,7 +6,7 @@
 The same program is also implemented in powder auto-indexing software Conograph GUI, and outputs an IGOR text file used for Conograph CUI.
 The program executes peak-search for any kinds of 1-dimensional distributions (Figure 1) represented as a histogram data.
 
-![Graph0](https://github.com/rtomiyasu/PeakSearch/assets/149344913/955ce5ea-31ed-41a0-85a7-79b028b8772f)
+![Graph0](https://github.com/rtomiyasu/PeakSearch/assets/149344913/4c71a7c7-1d95-4a40-99c6-12da01b5950f)
 ```
 Figure 1 : Example of 1-dimensional distribution
 ```
@@ -19,7 +19,7 @@ Subsequently, an IGOR text file is outputted, which contains the powder diffract
 
 If you open the file with IGOR Pro, you can see a plot as in Figure 2 immediately.
 
-![Graph1](https://github.com/rtomiyasu/PeakSearch/assets/149344913/13c74545-501d-4ab6-ad24-64dc5f2056eb)
+![Graph1](https://github.com/rtomiyasu/PeakSearch/assets/149344913/63df6fe7-6696-4b3d-a585-fce109f7449c)
 ```
 Figure 2 : Output IGOR text file
 ```
@@ -47,7 +47,7 @@ Figure 2 : Output IGOR text file
 #### Threshold
 on peak-heights influences on peak-search results, because a peak at peak-position x is detected, if and only if it has a peak-height more than (Threshold) × Err[y], where Err[y] is the value of error in the y-value of the distribution at x. Our recommended value of Threshold is 3.0. Adjust Threshold (to a value within 1--10 if the input observational errors are proper), if the result is not satisfactory.
 
-![Graph2](https://github.com/rtomiyasu/PeakSearch/assets/149344913/779f565e-93b7-4ae5-9a71-d3ce0f006e83)
+![Graph2](https://github.com/rtomiyasu/PeakSearch/assets/149344913/fd76b9a9-ddb2-4f53-8e38-d11a392b1f10)
 ```
 Figure 3 : Example of a case of synchrotron data.
 (By modifiying <Threshold>, it is possible to detect small diffraction peaks as well as peaks with high intensities.)
@@ -58,8 +58,8 @@ It is also an important parameter so as not to pick up background noise as peaks
 If this number is smaller, the smoothing curve is fit to local irregularity more finely.
 In Figure 4.1, noises are picked up as peaks, because the smoothing curve almost coincides with the background noise.
 
-![Graph3_1](https://github.com/rtomiyasu/PeakSearch/assets/149344913/63407928-75fb-4e35-9a1b-f1024efe10e4)
-![Graph3_2](https://github.com/rtomiyasu/PeakSearch/assets/149344913/9b2fa360-512a-45a3-b1d5-443f6b01a26a)
+![Graph3_1](https://github.com/rtomiyasu/PeakSearch/assets/149344913/6455d667-fd3e-4e01-a5b6-ee52a357efcb)
+![Graph3_2](https://github.com/rtomiyasu/PeakSearch/assets/149344913/e897d2c0-0021-4213-a4d3-fb987c55b50d)
 ```
 Figure 4.1 : "NumberOfPointsForSGMethod" = 5	Figure 4.2 : "NumberOfPointsForSGMethod" = 25
 ```
