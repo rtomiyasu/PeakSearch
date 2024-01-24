@@ -1,0 +1,168 @@
+<html lang="ja">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<style type="text/css">
+   body { line-height: 1.5; }
+</style>
+<head>
+<title> PeakSearch CUI プログラムの操作説明書 </title>
+</head>
+<body lang="ja">
+<font size="+1"><b> PeakSearch CUI プログラムの操作説明書 </b></font><br>
+<font size="-1" color="#339999"> [<a href="InstructionsPeakSearch.html">English</a> / Japanese] </font><br>
+<p>
+以下では、オープンソースのPeak search プログラムVersion 0.99 (<a href="http://sourceforge.jp/projects/conograph/releases/">download page</a>@sourceforge.jp)について簡単に説明します。<BR>
+粉末指数づけソフトウェアConograph GUIに同プログラムは付属しており、Conograph CUIの入力ファイルを作成するために使用します。
+</p>
+<p>
+同プログラムは、Figure 1のような2次元データのピーク探索を実行します。<BR>
+</p>
+<div align="center">
+   <p class="image"><img src="figures/Graph0.png" width="586" height="297" alt="Figure 1"></p>
+   <p class="caption ">Figure 1 : ２次元データの例</p>
+</div>
+実行後、入力された2次元データのコピーおよび、入力で指定したしきい値以上のピーク高さを持つと推定されるピークに関する以下の情報を含む、IGORテキストファイル(<a href="sample/sample1(CharacteristicXrays)/output/sample1_pks.histogramIgor">例</a>)が出力されます:<BR>
+<ol>
+ <LI> ピーク位置（ピークトップのX座標）, 
+ <LI> ピーク高さ (ピークトップのY座標から推定されたバックグラウンド値が差し引かれた値）,
+ <LI> ピーク半値幅（つまり、full-widths-at-half-maximum (FWHM)と呼ばれる値）
+</ol>
+本プログラムにGUIは付属していませんが、ソフトウェアIGOR Proをお持ちであれば、ファイルを開くだけでFigure 2のようなプロットデータを見ることができます.<BR>
+<div align="center">
+   <p class="image"><img src="figures/Graph1.png" width="588" height="300" alt="Figure 2"></p>
+   <p class="caption ">Figure 2 : 出力された IGOR テキストファイル (IGOR Proで開いたときの表示例）</p>
+</div>
+</p>
+
+<h2>FAQ</h2>
+<ul>
+    <li><a href="#HowtoUse">ピークサーチプログラムの使い方</a></li>
+    <li><a href="#ParametersToModify">うまくいかないときに変更するパラメータ</a>
+    <li><a href="#HowtoReportBugs">バグ報告のお願い</a></li>
+    <li><a href="#copyright">著作権について</a></li>
+</ul>
+
+<h3><a name="HowtoUse">ピークサーチプログラムの使い方</a></h3>
+<ol>
+
+<LI> 同プログラムを実行するには、以下の３つの入力ファイルを準備する必要があります。（付属の"sample"フォルダに入力例があります。）
+    <UL>
+    <LI> "*.inp.xml"：計算パラメータの入力ファイル
+         (<a href="sample/sample1(CharacteristicXrays)/sample1.inp.xml">例</a>)、</LI>
+    <LI> "cntl.inp.xml"： "*.inp.xml"を含む入出力ファイル名を指定するファイル
+         (<a href="sample/sample1(CharacteristicXrays)/cntl.inp.xml">例</a>)、</LI>
+    <LI> ２次元データを入力するためのテキストファイル。現在扱える書式は以下の３つです。
+<ol>
+ <LI> <a href="sample/sample3(PF)/sample3.dat">XY</a></LI>
+ <LI> <a href="sample/sample2(TOF)/sample2.histogramIGOR">IGOR</a></LI>
+ <LI> <a href="sample/sample1(CharacteristicXrays)/sample1.dat">Rietan</a></LI>
+</ol>
+	"XY"形式と"IGOR"形式では、データの３列目にY値（２行目）の観測誤差を入力することが出来ます。<BR>
+	３列目に何も書いてなければ、Y値のルートが観測誤差として使用されます。
+    </LI>
+    </UL>
+
+<LI> "sample"フォルダの中の一つのフォルダをコピーし、
+コピー先のフォルダ内の二つのXMLファイルの中身とファイル名"*.inp.xml"を適宜修正してください。<BR>
+ファイル名"*.inp.xml"を変更した際は、"cntl.inp"のファイル名も併せて修正する必要があります。
+</LI>
+
+<LI> コマンドプロンプト、またはお使いのOSのターミナルウィンドウを立ち上げ、
+     上で変更した"cntl.inp"と同じフォルダにカレントフォルダを移動してください。
+</LI>
+
+<LI> コマンドプロンプトより、PeakSearch.exeの絶対パスを入力して実行します。</LI>
+</ol>
+
+<h3><a name="ParametersToModify">うまくいかないときに変更するパラメータ</a></h3>
+<p>
+より良い結果を得るためには、適宜、<a href="#Threshold">&lt;Threshold&gt;</a>と<a href="#NumberOfPointsForSGMethod">&lt;NumberOfPointsForSGMethod&gt;</a> を修正するとよいです。<BR>
+<a href="#Alpha2Correction">&lt;Alpha2Correction&gt;</a>には、&alpha;2除去に関するパラメータを入力します（&alpha;2ピークを含む特性X線データに粉末指数づけを行う前処理のため）。
+</p>
+<ol>
+<LI> <a name="Threshold">&lt;Threshold&gt;</a> は、
+     ピーク位置 x に検出されたピークを、ピークとして検出・出力するかどうかの判定基準を与えます。<BR>
+     具体的には、ピーク位置のX座標 xにおける、ヒストグラムのY座標 y の推定観測誤差をErr[y]としたとき、(Threshold) &times; Err[y]より大きなピーク高さを持つピークのみが検出されます。<BR>
+     ただし、ここで使用されるピーク高さは、y から推定されたバックグラウンド値が差し引かれた値です。<BR>
+     2次元データのY値の観測誤差として妥当な値が入力されていれば、多くのケースで 3 前後から10の範囲で、&lt;Threshold&gt;の最適値が得られると考えられます。<BR>
+
+<div align="center">
+   <p class="image"><img src="figures/Graph2.png" width="588" height="300" alt="Figure 3"></p>
+   <p class="caption ">Figure 3 : 放射光データにおけるピークサーチ結果の例<BR>
+     (&lt;Threshold&gtを変更することで、強度の小さな回折ピークをどの程度検出するかを設定できます。)</p>
+</div>
+</LI>
+
+<LI>
+<p>
+ <a name="NumberOfPointsForSGMethod">&lt;NumberOfPointsForSGMethod&gt;</a>はバックグラウンドノイズの検出を抑制するために使用します。<BR>
+     この値が小さいとき、より少ないデータ点数だけが使用される結果として、近似曲線（３次多項式）が局所的な凹凸をより明確に反映します。<BR>
+     Figure 4.1の例は、近似曲線がバックグラウンドノイズを正確に表現してしまうと、ノイズの凹凸をピークとして検出してしまうケースが生じ得ることを示しています。
+     
+<table border="0" cellpadding="0">
+  <tr>
+	<td align="center" width="400"> <img src="figures/Graph3_1.png" width="328" height="282" alt="Figure 4.1"> </td>
+	<td align="center" width="400"> <img src="figures/Graph3_2.png" width="328" height="282" alt="Figure 4.2"> </td>
+  </tr>
+  <tr>
+	<td align="center"> Figure 4.1 : NumberOfPointsForSGMethod = 5 </td>
+	<td align="center"> Figure 4.2 : NumberOfPointsForSGMethod = 25 </td>
+  </tr>
+</table>
+</p>
+</LI>
+
+<LI> <a name="Alpha2Correction">&lt;Alpha2Correction&gt;</a>には、特性X線データが&alpha;2ピークを含む場合1を、それ以外では0を入力します。<BR>また、Cu K&alpha;2以外のデータでにおいては、&lt;Kalpha1WaveLength&gt;および&lt;Kalpha2WaveLength&gt;
+に入力する波長を、以下の表を参考にご修正ください。
+
+<table border="1" cellpadding="5">
+  <tr>
+    <th> </th>
+    <th> K&alpha;1 </th>
+    <th> K&alpha;2 </th>
+  </tr>
+  <tr>
+	<td> Ag </td><td> 0.5594075 </td><td> 0.563798 </td>
+  </tr>
+  <tr>
+	<td> Co </td><td> 1.788965 </td><td> 1.792850 </td>
+  </tr>
+  <tr>
+	<td> Cr </td><td> 2.289700 </td><td> 2.293606 </td>
+  </tr>
+  <tr>
+	<td> Cu </td><td> 1.540562 </td><td> 1.544398 </td>
+  </tr>
+  <tr>
+	<td> Fe	</td><td> 1.936042 </td><td> 1.939980 </td>
+  </tr>
+  <tr>
+	<td> Mo	</td><td> 0.709300 </td><td> 0.713590 </td>
+  </tr>
+</table>
+</LI>
+
+</ol>
+
+<h3><a name="HowtoReportBugs">バグ報告のお願い</a></h3>
+<p>
+コード改善のために、疑わしい事例を見つけられましたら、以下のアドレスまでご連絡頂けると助かります。<BR>
+その際、"LOG_PEAKSEARCH.txt"を含む全ての入出力ファイルをご添付ください。
+<UL>
+<LI> conograph-bugs (at) ml.post.kek.jp
+</UL>
+</p>
+
+<h3><a name="copyright">著作権について</a></h3>
+<p>
+本プログラムは未発表のアルゴリズムを使用していますが、
+ソースコードは、MITライセンスの下、web上(Conographプロジェクトの<a href="http://sourceforge.jp/projects/conograph/scm/svn/tree/head">リポジトリリスト<a/>)で公開しています（2013/2/24現在）。
+</p>
+
+<h2><a name="Acknowledgments">謝辞</a></h2>
+<p>
+Conograph projectのために粉末回折データを提供頂いた方々に感謝します。
+</p>
+
+<A HREF="#">［Back to top]</A>
+</body>
+
