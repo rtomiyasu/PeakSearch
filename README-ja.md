@@ -1,8 +1,7 @@
-[to English](https://github.com/rtomiyasu/PeakSearch/blob/main/README.md)
-
+[to_engilish](https://github.com/rtomiyasu/PeakSearch/blob/main/README.md)
 # PeakSearch CUI プログラムの操作説明書
 ## 概要
-以下では、オープンソースのPeak search プログラム[Version 0.99](https://github.com/rtomiyasu/PeakSearch/tree/main/PeakSearch0_9_99_win)について簡単に説明します。粉末指数づけソフトウェア[Conograph GUI](https://z-code-software.com/downloads/)に同プログラムは付属しており、Conograph CUIの入力ファイルを作成するために使用します。同プログラムは、Figure 1のような2次元データのピーク探索を実行します。アルゴリズム概要はこちら（英語）。
+以下では、オープンソースのPeak search プログラム[Version 0.99](https://github.com/rtomiyasu/PeakSearch/tree/main/PeakSearch0_9_99_win)について簡単に説明します。粉末指数づけソフトウェアConograph GUIに同プログラムは付属しており、Conograph CUIの入力ファイルを作成するために使用します。同プログラムは、Figure 1のような2次元データのピーク探索を実行します。
 
 ![Graph0](https://github.com/rtomiyasu/PeakSearch/assets/149344913/4c71a7c7-1d95-4a40-99c6-12da01b5950f)
 ```
@@ -77,3 +76,12 @@ Figure 4.1 : "NumberOfPointsForSGMethod" = 5	Figure 4.2 : "NumberOfPointsForSGMe
 |Cu|1.540562  |1.544398
 |Fe|1.936042  |1.939980
 |Mo|0.709300  |0.713590
+
+## バグ報告のお願い
+コード改善のために、疑わしい事例を見つけられましたら、以下のアドレスまでご連絡頂けると助かります。
+その際、"LOG_PEAKSEARCH.txt"を含む全ての入出力ファイルをご添付ください。
+
+- conograph-bugs (at) ml.post.kek.jp
+
+## 謝辞
+Conograph projectのために粉末回折データを提供頂いた方々に感謝します。

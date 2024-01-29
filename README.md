@@ -1,10 +1,9 @@
-[to Japanese](https://github.com/rtomiyasu/PeakSearch/blob/main/README-ja.md)
+[to_Japanese](https://github.com/rtomiyasu/PeakSearch/blob/main/README-ja.md)
 # Instructions for PeakSearch CUI program
 
 ## Overview
 [Version 0.99](https://github.com/rtomiyasu/PeakSearch/tree/main/PeakSearch0_9_99_win) is the initial release of the PeakSearch program.
-The same program is also implemented in powder auto-indexing software [Conograph GUI](https://z-code-software.com/downloads/), and outputs an IGOR text file used for Conograph CUI. The algorithm of the program is described here.
-
+The same program is also implemented in powder auto-indexing software Conograph GUI, and outputs an IGOR text file used for Conograph CUI.
 The program executes peak-search for any kinds of 1-dimensional distributions (Figure 1) represented as a histogram data.
 
 ![Graph0](https://github.com/rtomiyasu/PeakSearch/assets/149344913/4c71a7c7-1d95-4a40-99c6-12da01b5950f)
@@ -77,4 +76,12 @@ If it is not Cu Kα2, Kalpha1WaveLength and Kalpha2WaveLength are necessary to b
 |Cu|1.540562  |1.544398
 |Fe|1.936042  |1.939980
 |Mo|0.709300  |0.713590
+
+## How do I report bugs?
+You should send us a bug report with all of the input and output files attached (including LOG_PEAKSEARCH.txt) to the following e-mail address:
+
+- conograph-bugs (at) ml.post.kek.jp
+
+## Acknowledgments
+I would like to express my gratitude to those who offered powder diffraction patterns for the Conograph project.
 
