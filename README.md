@@ -27,6 +27,8 @@ Figure 2 : Output IGOR text file
 ## FAQ
 - [How to use the PeakSearch program](#How_to_use_the_PeakSearch_program)
 - [How to adjust the parameters](#How_to_adjust_the_parameters)
+- [How do I report bugs?](#How_do_I_report_bugs)
+- [Acknowledgments](#Acknowledgments)
 
 ### How_to_use_the_PeakSearch_program
 1. The PeakSearch program requires the three following input files. (Examples can be found in the "sample" folder.)
