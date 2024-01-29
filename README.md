@@ -79,7 +79,7 @@ If it is not Cu Kα2, Kalpha1WaveLength and Kalpha2WaveLength are necessary to b
 |Fe|1.936042  |1.939980
 |Mo|0.709300  |0.713590
 
-## How_do_I_report_bugs
+## How do I report bugs
 You should send us a bug report with all of the input and output files attached (including LOG_PEAKSEARCH.txt) to the following e-mail address:
 
 - conograph-bugs (at) ml.post.kek.jp
