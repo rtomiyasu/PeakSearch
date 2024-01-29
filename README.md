@@ -30,7 +30,7 @@ Figure 2 : Output IGOR text file
 - [How do I report bugs?](#How_do_I_report_bugs)
 - [Acknowledgments](#Acknowledgments)
 
-### How_to_use_the_PeakSearch_program
+### How to use the PeakSearch program
 1. The PeakSearch program requires the three following input files. (Examples can be found in the "sample" folder.)
     - *.inp.xml file that includes information about input parameters ([Example](https://github.com/rtomiyasu/PeakSearch/blob/main/PeakSearch0_9_99_win/sample/sample1(CharacteristicXrays)/sample1.inp.xml))
     - cntl.inp.xml file that includes the names of the *.inp.xml file and the output file ([Example](https://github.com/rtomiyasu/PeakSearch/blob/main/PeakSearch0_9_99_win/sample/sample1(CharacteristicXrays)/cntl.inp.xml))
@@ -43,7 +43,7 @@ Figure 2 : Output IGOR text file
 1. Open a command prompt or terminal window in your operating system. Change the current folder to the same folder that contains the modified cntl.inp.xml file.
 1. Enter the absolute path to the PeakSearch.exe file on the command line and execute PeakSearch.
 
-### How_to_adjust_the_parameters
+### How to adjust the parameters
 [Threshold](#Threshold), [NumberOfPointsForSGMethod](#NumberOfPointsForSGMethod) are necessary to be modified in order to obtain more successful results. It is also necessary to set [Alpha2Correction](#Alpha2Correction) for powder patterns including α2 reflections of characteristic X-rays.
 
 #### Threshold
