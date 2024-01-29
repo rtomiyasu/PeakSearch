@@ -1,4 +1,4 @@
-[to_Japanese](https://github.com/rtomiyasu/PeakSearch/blob/main/README-ja.md)
+[to Japanese](https://github.com/rtomiyasu/PeakSearch/blob/main/README-ja.md)
 # Instructions for PeakSearch CUI program
 
 ## Overview
