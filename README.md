@@ -24,6 +24,10 @@ If you open the file with IGOR Pro, you can see a plot as in Figure 2 immediatel
 Figure 2 : Output IGOR text file
 ```
 
+## NEWS
+### 2024/1/31
+- The web page of the source codes was moved from OSDN to GitHub.
+
 ## FAQ
 - [How to use the PeakSearch program](#How_to_use_the_PeakSearch_program)
 - [How to adjust the parameters](#How_to_adjust_the_parameters)
