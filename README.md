@@ -3,7 +3,8 @@
 
 ## Overview
 [Version 0.99](https://github.com/rtomiyasu/PeakSearch/tree/main/PeakSearch0_9_99_win) is the initial release of the PeakSearch program.
-The same program is also implemented in powder auto-indexing software Conograph GUI, and outputs an IGOR text file used for Conograph CUI.
+The same program is also implemented in powder auto-indexing software [Conograph GUI]().<br>The algorithm of the program is decribed [here]().
+
 The program executes peak-search for any kinds of 1-dimensional distributions (Figure 1) represented as a histogram data.
 
 ![Graph0](https://github.com/rtomiyasu/PeakSearch/assets/149344913/4c71a7c7-1d95-4a40-99c6-12da01b5950f)
