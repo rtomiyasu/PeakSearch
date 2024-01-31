@@ -84,10 +84,13 @@ If it is not Cu Kα2, Kalpha1WaveLength and Kalpha2WaveLength are necessary to b
 |Fe|1.936042  |1.939980
 |Mo|0.709300  |0.713590
 
-## How do I report bugs
+## How do I report bugs?
 You should send us a bug report with all of the input and output files attached (including LOG_PEAKSEARCH.txt) to the following e-mail address:
+- tomiyasu.ryoko.446 (at) m.kyushu-u.ac.jp
 
-- conograph-bugs (at) ml.post.kek.jp
+## How do I cite the program?
+If you use the program for your research, we strongly encourage you to include a citation of the following article in the bibliography.
+- A. Esmaeili, T. Kamiyama, R. Oishi-Tomiyasu, "New functions and graphical user interface attached to powder indexing software", J. Appl. Cryst. 50 (2017), pp.651--659.
 
 ## Acknowledgments
 I would like to express my gratitude to those who offered powder diffraction patterns for the Conograph project.
