@@ -19,7 +19,7 @@ The following 1--4 explain all the steps of the algorithm:
 
 1. Using the following formula, estimate the peak height h at every local minimum point $`x_0`$ ("peak height" means the "y-value of the peaktop" minus "estimated background value"):
 
-    $`h=\frac{e^{frac{1}{2}}}{4}A(x_2-x_1)`$&emsp;&emsp;&emsp;(Eq.1)
+    $`h=\frac{e^{\frac{1}{2}}}{4}A(x_2-x_1)`$&emsp;&emsp;&emsp;(Eq.1)
 
     where $`x_1`$ and $`x_2`$ are the x-coordinates at which the second derivative equals zero (Figure 1).
 
@@ -27,4 +27,4 @@ The following 1--4 explain all the steps of the algorithm:
 
     $`FWHM={\sqrt{2\ln{2}}}(x_2-x_1)`$&emsp;&emsp;&emsp;(Eq.2)
 
-1. Eq. 1 and Eq. 2 are the equations any 1-dimensional Gaussian function $`f(x)=he^{-frac{{x-x_0}^2}{2σ^2}}`$ satisfies.
+1. Eq. 1 and Eq. 2 are the equations any 1-dimensional Gaussian function $`f(x)=he^{-\frac{{x-x_0}^2}{2σ^2}}`$ satisfies.
