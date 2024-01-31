@@ -87,7 +87,7 @@ Figure 4.1 : "NumberOfPointsForSGMethod" = 5	Figure 4.2 : "NumberOfPointsForSGMe
 ## バグ報告のお願い
 コード改善のために、疑わしい事例を見つけられましたら、以下のアドレスまでご連絡頂けると助かります。
 その際、"LOG_PEAKSEARCH.txt"を含む全ての入出力ファイルをご添付ください。
-- tomiyasu.ryoko.446 (at) m.kyushu-u.ac.jp
+- tomiyasu (at) imi.kyushu-u.ac.jp
  
 ## 論文の引用に関して
 当ブログラムを用いて得られた研究成果を発表される際は、以下の文献を引用してください。
