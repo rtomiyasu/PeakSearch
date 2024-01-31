@@ -2,7 +2,7 @@
 # PeakSearch CUI プログラムの操作説明書
 ## 概要
 以下では、オープンソースのPeak search プログラム[Version 0.99](https://github.com/rtomiyasu/PeakSearch/tree/main/PeakSearch0_9_99_win)について簡単に説明します。粉末指数づけソフトウェア[Conograph GUI](https://z-code-software.com/downloads/)にも同プログラムは付属しており、Conograph CUIの入力ファイルを作成するために使用されています。
-アルゴリズム概要は[こちら]()（英語）。
+アルゴリズム概要は[こちら](https://github.com/rtomiyasu/PeakSearch/blob/main/PeakSearchAlgorithm.md)（英語）。
 
 ![Graph0](https://github.com/rtomiyasu/PeakSearch/assets/149344913/4c71a7c7-1d95-4a40-99c6-12da01b5950f)
 ```
