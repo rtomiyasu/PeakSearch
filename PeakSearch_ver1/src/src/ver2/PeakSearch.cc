@@ -104,8 +104,8 @@ void PeakSearch::execute(const ProfileData &pdata)
 
        	// Range for peak search.
    		const Vec_DP::const_iterator it_begin_pks = lower_bound(nx.begin(), nx.end(), m_peak_search_range.begin);
-   		const Int4 ibegin_pks = max(m_PSDivTray.begin()->putHalfPoints(), distance(nx.begin(), it_begin_pks));
-   		const Int4 iend_pks = min(nsize-m_PSDivTray.rbegin()->putHalfPoints(), distance(nx.begin(), upper_bound(it_begin_pks, nx.end(), m_peak_search_range.end)));
+   		const Int4 ibegin_pks = max(m_PSDivTray.begin()->putHalfPoints(), (Int4) distance(nx.begin(), it_begin_pks));
+   		const Int4 iend_pks = min(nsize-m_PSDivTray.rbegin()->putHalfPoints(), (Int4) distance(nx.begin(), upper_bound(it_begin_pks, nx.end(), m_peak_search_range.end)));
 
 	   	Int4 ibegin = m_PSDivTray.begin()->putHalfPoints(), iend;
 	   	SavitzkyGolay sg;
