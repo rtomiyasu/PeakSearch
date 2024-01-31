@@ -86,7 +86,7 @@ If it is not Cu Kα2, Kalpha1WaveLength and Kalpha2WaveLength are necessary to b
 
 ## How do I report bugs?
 You should send us a bug report with all of the input and output files attached (including LOG_PEAKSEARCH.txt) to the following e-mail address:
-- tomiyasu.ryoko.446 (at) m.kyushu-u.ac.jp
+- tomiyasu (at) imi.kyushu-u.ac.jp
 
 ## How do I cite the program?
 If you use the program for your research, we strongly encourage you to include a citation of the following article in the bibliography.
