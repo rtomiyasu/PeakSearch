@@ -27,4 +27,4 @@ The following 1--4 explain all the steps of the algorithm:
 
     $`FWHM={\sqrt{2\ln{2}}}(x_2-x_1)`$&emsp;&emsp;&emsp;(Eq.2)
 
-1. Eq. 1 and Eq. 2 are the equations any 1-dimensional Gaussian function $`f(x)=he^{-\dfrac{{x-x_0}^2}{2σ^2}}`$ satisfies.
+1. Eq. 1 and Eq. 2 are the equations any 1-dimensional Gaussian function $`f(x)=he^{-\dfrac{{(x-x_0)}^2}{2σ^2}}`$ satisfies.
