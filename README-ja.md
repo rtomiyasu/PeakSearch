@@ -87,8 +87,11 @@ Figure 4.1 : "NumberOfPointsForSGMethod" = 5	Figure 4.2 : "NumberOfPointsForSGMe
 ## バグ報告のお願い
 コード改善のために、疑わしい事例を見つけられましたら、以下のアドレスまでご連絡頂けると助かります。
 その際、"LOG_PEAKSEARCH.txt"を含む全ての入出力ファイルをご添付ください。
-
-- conograph-bugs (at) ml.post.kek.jp
+- tomiyasu.ryoko.446 (at) m.kyushu-u.ac.jp
+ 
+## 論文の引用に関して
+当ブログラムを用いて得られた研究成果を発表される際は、以下の文献を引用してください。
+- A. Esmaeili, T. Kamiyama, R. Oishi-Tomiyasu, "New functions and graphical user interface attached to powder indexing software", J. Appl. Cryst. 50 (2017), pp.651--659.
 
 ## 謝辞
 Conograph projectのために粉末回折データを提供頂いた方々に感謝します。
